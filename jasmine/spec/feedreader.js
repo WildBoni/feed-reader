@@ -102,10 +102,29 @@ $(function() {
             expect($('.entry').length).not.toBe(0);
          });
     });
-    /* TODO: Write a new test suite named "New Feed Selection"
-
+    /* TODO: Write a new test suite named "New Feed Selection"*/
+    describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         // We'll need two different feeds to be tested against each other
+         var firstFeed, secondFeed;
+         // In this Udacity forum discussion John Mav explains the use of done()
+         // https://discussions.udacity.com/t/new-feed-selection-question/16274/14
+        beforeEach(function(done) {
+             loadFeed(0, function() {
+                 firstFeed = $('.feed').html();
+                 done();
+             });
+        });
+        // check that new content is different
+        it ('content is changing ', function(done) {
+            loadFeed(1, function() {
+                secondFeed = $('.feed').html();
+                expect(firstFeed).not.toEqual(secondFeed);
+                done();
+            });
+        });
+    });
 }());
