@@ -83,14 +83,25 @@ $(function() {
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
-
+    describe('Initial Entries', function() {
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-
+         // using beforeEach  as specified in Jasmine documentation
+         // https://jasmine.github.io/2.1/introduction.html
+         // And in Udacity Writing Test Suites - testing asynchronous code
+         beforeEach(function(done) {
+             loadFeed(0, function() {
+                 done();
+             });
+         });
+         it ('contain at least one element', function() {
+            expect($('.entry').length).not.toBe(0);
+         });
+    });
     /* TODO: Write a new test suite named "New Feed Selection"
 
         /* TODO: Write a test that ensures when a new feed is loaded
