@@ -19,10 +19,6 @@ The feedreader.js file triggers the following tests:
 - Controls that there's at least one element available in the feed
 - Compares feed selections and verifies that different content has been loaded
 
-### Online version
-
-You can see the online version at [https://wildboni.github.io/feed-reader/index.html](https://wildboni.github.io/feed-reader/index.html).
-
 ### Running locally
 
 1. Clone the GitHub repository
