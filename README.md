@@ -1,8 +1,7 @@
-# Lake map
+# Feed Reader testing with Jasmine
 
-Lake map is a web application that lets you find out the most interesting places on Lake Maggiore and plan your vacations!
-
-This application has been created as a project for Udacity Front End Web Developer NanoDegree.
+This application is a Feed Reader that retrieves news form different websites.
+Its functionalities are tested using Jasmine: the feedreader.js file has been created as a project for Udacity Front End Web Developer NanoDegree.
 
 ## Technologies used
 
@@ -13,23 +12,23 @@ This application has been created as a project for Udacity Front End Web Develop
 
 The feedreader.js file triggers the following tests:
 
-- It makes sure that the allFeeds variable is defined and not empty
-- It ensures that each feed has a defined name and URL and that they're not empty.
-- It checks that the menu is hidden by default
-- It ensures that the menu is changing visibility when the hamburger button is clicked
-- It controls that there's at least one element available in the feed
-- It compares feed selections and verifies that different content has been loaded
+- Makes sure that the allFeeds variable is defined and not empty
+- Ensures that each feed has a defined name and URL and that they're not empty.
+- Checks that the menu is hidden by default
+- Ensures that the menu is changing visibility when the hamburger button is clicked
+- Controls that there's at least one element available in the feed
+- Compares feed selections and verifies that different content has been loaded
 
 ### Online version
 
-You can see the online version at [https://wildboni.github.io/lake-map/public/index.html](https://wildboni.github.io/lake-map/public/index.html).
+You can see the online version at [https://wildboni.github.io/feed-reader/index.html](https://wildboni.github.io/feed-reader/index.html).
 
 ### Running locally
 
 1. Clone the GitHub repository
 
   ```
-  git clone https://github.com/WildBoni/lake-map.git
+  git clone https://github.com/WildBoni/feed-reader.git
   ```
 
 2. Open the index.html file in your browser and you'll see the testing results at the bottom of the page
